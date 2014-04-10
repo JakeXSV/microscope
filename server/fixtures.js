@@ -1,4 +1,4 @@
-if (Posts.find().count() === 0) {
+if (Posts.find().count() === 0) { //if server doesn't publish
   Posts.insert({
     title: 'Introducing Telescope',
     author: 'Sacha Greif',
