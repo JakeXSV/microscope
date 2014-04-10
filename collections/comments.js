@@ -20,7 +20,9 @@ Meteor.methods({
     );
     //increment comment count in post
     Posts.update(comment.postId, {$inc: {commentsCount: 1}});
-    //insert comment into db
-    return Comments.insert(comment);
+    //insert comment into db & save id for notification creation
+    comment._id = Comments.insert(comment);
+    createCommentNotification(comment);
+    return comment;
   }
 });
