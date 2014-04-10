@@ -7,6 +7,6 @@ Meteor.publish('comments', function(postId) {
   return Comments.find({postId: postId});
 });
 
-Meteor.publish('notifications', function() {
-  return Notifications.find();
+Meteor.publish('notifications', function() { //only sync notifications relevant to user
+  return Notifications.find({userId: this.userId});
 });
