@@ -1,6 +1,5 @@
-//remove autopublish && instead serve entire posts collection/cursor
-Meteor.publish('posts', function() {
-  return Posts.find();
+Meteor.publish('posts', function(options) {
+  return Posts.find({}, options);
 });
 
 Meteor.publish('comments', function(postId) {
