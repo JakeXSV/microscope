@@ -1,4 +1,4 @@
-Notifications = new Meteor.Collection('');
+Notifications = new Meteor.Collection('notifications');
 
 //only allow user who owns post to update their notifications
 Notifications.allow({

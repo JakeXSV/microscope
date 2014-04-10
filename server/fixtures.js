@@ -43,7 +43,7 @@ if (Posts.find().count() === 0) {
     author: tom.profile.name,
     url: 'http://meteor.com',
     submitted: now - 10 * 3600 * 1000,
-    commentsCount: 2
+    commentsCount: 0
   });
 
   Posts.insert({
@@ -52,6 +52,6 @@ if (Posts.find().count() === 0) {
     author: tom.profile.name,
     url: 'http://themeteorbook.com',
     submitted: now - 12 * 3600 * 1000,
-    comentsCount: 2
+    commentsCount: 0
   });
 }
